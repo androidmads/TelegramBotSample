@@ -1,6 +1,4 @@
 # TelegramBotSample
-
-## How to Download
-```groovy
-compile 'com.ajts.library.telegrambot:telegrambotlibrary:1.0.0'
-```
+It is a light weight framework to manage your Telegram Bot
+## Documentation
+[https://github.com/AJTechsoft/Documentations/blob/master/TelegramBotDocumentation.md](https://github.com/AJTechsoft/Documentations/blob/master/TelegramBotDocumentation.md)
