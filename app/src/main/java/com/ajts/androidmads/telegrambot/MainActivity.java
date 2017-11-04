@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         documentPickedPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath()+"/download.pdf";
 
-        final Telegram telegram = new Telegram("467217516:AAFR2YI9b6FkjLJGmVnEeRVPwhieutTw0mI");
+        final Telegram telegram = new Telegram("<bot-token>");
 
         findViewById(R.id.getMe).setOnClickListener(new View.OnClickListener() {
             @Override
