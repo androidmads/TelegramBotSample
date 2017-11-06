@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.message).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendMessage("@androidmad", "TelegramBotLibrary", new TelegramCallback<Message>() {
+                telegram.sendMessage("<Channel-Name or Chat-ID>", "TelegramBotLibrary", new TelegramCallback<Message>() {
                     @Override
                     public void onResponse(Call call, Message response) {
                         Log.v("response.body()", response.isOk() + "");
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.messageHtml).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendMessage("@androidmad",
+                telegram.sendMessage("<Channel-Name or Chat-ID>",
                         "<i>TelegramBotLibrary</i>",
                         Telegram.ParseMode.HTML,
                         new TelegramCallback<Message>() {
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.messageMD).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendMessage("@androidmad",
+                telegram.sendMessage("<Channel-Name or Chat-ID>",
                         "*TelegramBotLibrary*",
                         Telegram.ParseMode.Markdown,
                         new TelegramCallback<Message>() {
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.send_photo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendPhoto("@androidmad",
+                telegram.sendPhoto("<Channel-Name or Chat-ID>",
                         TelegramMediaType.Image.png,
                         new File(imagePickedPath),
                         "telegram photo",
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.send_video).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendVideo("@androidmad",
+                telegram.sendVideo("<Channel-Name or Chat-ID>",
                         TelegramMediaType.Video.mp4,
                         new File(videoPickedPath),
                         "telegram video",
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.send_audio).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendAudio("@androidmad",
+                telegram.sendAudio("<Channel-Name or Chat-ID>",
                         TelegramMediaType.Audio.mp3,
                         new File(audioPickedPath),
                         "telegram audio",
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.send_document).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendDocument("@androidmad",
+                telegram.sendDocument("<Channel-Name or Chat-ID>",
                         TelegramMediaType.Document.file,
                         new File(documentPickedPath),
                         "telegram document",
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.send_location).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendLocation("@androidmad",
+                telegram.sendLocation("<Channel-Name or Chat-ID>",
                         "11.08",
                         "77.36",
                         new TelegramCallback<Message>() {
@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.send_venue).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendVenue("@androidmad",
+                telegram.sendVenue("<Channel-Name or Chat-ID>",
                         "11.08",
                         "77.36",
                         "My venue",
