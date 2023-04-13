@@ -42,15 +42,15 @@ public class MainActivity extends AppCompatActivity {
 
         documentPickedPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath()+"/download.pdf";
 
-        final Telegram telegram = new Telegram("<bot-token>");
+        final Telegram telegram = new Telegram("<6037129416:AAFGxK98gg-dm3kMyGDv0a4Gl8Q5-mzP1KE>");
 
         findViewById(R.id.getMe).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    telegram.getMe(new TelegramCallback<GetMe>() {
+                    telegram.getMe(new TelegramCallback<GetMe>() {https://api.telegram.org/bot6037129416:AAFGxK98gg-dm3kMyGDv0a4Gl8Q5-mzP1KE/getme
                         @Override
-                        public void onResponse(Call call, final GetMe getMe) {
+                        public void onResponse(Call call, final GetMe getMe) {https://api.telegram.org/bot6037129416:AAFGxK98gg-dm3kMyGDv0a4Gl8Q5-mzP1KE/getme
                             Log.v("response.body()", getMe.isOk() + "");
                         }
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.message).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                telegram.sendMessage("<Channel-Name or Chat-ID>", "TelegramBotLibrary", new TelegramCallback<Message>() {
+                telegram.sendMessage("<Channel-Name or Chat-ID>", "TelegramBotLibrary", new TelegramCallback<Message>() {https://api.telegram.org/bot6037129416:AAFGxK98gg-dm3kMyGDv0a4Gl8Q5-mzP1KE/sendMessage?sms_forwarder&chat_id=5858638923&text=Message
                     @Override
                     public void onResponse(Call call, Message response) {
                         Log.v("response.body()", response.isOk() + "");
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 telegram.sendMessage("<Channel-Name or Chat-ID>",
                         "<i>TelegramBotLibrary</i>",
                         Telegram.ParseMode.HTML,
-                        new TelegramCallback<Message>() {
+                        new TelegramCallback<Message>() {https://api.telegram.org/bot6037129416:AAFGxK98gg-dm3kMyGDv0a4Gl8Q5-mzP1KE/sendMessage?parse_mode=markdown&chat_id=5858638923&text=Message
                             @Override
                             public void onResponse(Call call, Message response) {
                                 Toast.makeText(MainActivity.this, response.isOk() + "", Toast.LENGTH_SHORT).show();
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 telegram.sendMessage("<Channel-Name or Chat-ID>",
                         "*TelegramBotLibrary*",
                         Telegram.ParseMode.Markdown,
-                        new TelegramCallback<Message>() {
+                        new TelegramCallback<Message>() {https://api.telegram.org/bot6037129416:AAFGxK98gg-dm3kMyGDv0a4Gl8Q5-mzP1KE/sendMessage?parse_mode=markdown&chat_id=5858638923&text=Message
                             @Override
                             public void onResponse(Call call, Message response) {
                                 Toast.makeText(MainActivity.this, response.isOk() + "", Toast.LENGTH_SHORT).show();
